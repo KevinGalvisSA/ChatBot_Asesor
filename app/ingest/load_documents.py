@@ -64,7 +64,7 @@ def upload_to_qdrant(docs):
     # Insertamos los puntos en la colección de Qdrant
     client.upsert(
         collection_name=COLLECTION_NAME,
-        points=points
+        points=points # type: ignore
     )
 
 if __name__ == "__main__":

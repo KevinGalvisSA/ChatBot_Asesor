@@ -43,7 +43,7 @@ async def ask(user_input: UserInput):
         raise ValueError("La clave 'question' no está presente en el estado.")
     
     # Obtener la respuesta del bot usando el flujo de Langchain
-    result = langgraph.invoke(state)  # Pasa todo el estado
+    result = langgraph.invoke(state)  # type: ignore # Pasa todo el estado
     
     # Guardar la conversación en el historial (archivo JSON)
     conversation_history = save_conversation_history(user_input.phone, user_input.question, result["response"])

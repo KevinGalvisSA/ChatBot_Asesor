@@ -6,6 +6,8 @@ google-generativeai
 qdrant-client
 python-dotenv
 openai
+google.genai
+
 # Para manejo de API
 fastapi
 uvicorn

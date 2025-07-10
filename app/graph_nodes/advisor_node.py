@@ -56,7 +56,7 @@ def advisor_node(state):
     # Si es necesario, hacer un resumen de la conversación
     if len(state["conversation_history"]) > 5:  # Límite de mensajes para generar resumen
         summary_prompt = get_conversation_summary_prompt(state["conversation_history"])
-        summary = llm.predict(summary_prompt)
+        summary = llm.predict(summary_prompt) # type: ignore
         return {"response": formatted_response, "summary": summary}
     
     return {"response": formatted_response}
