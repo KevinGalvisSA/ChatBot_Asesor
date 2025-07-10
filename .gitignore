@@ -1,2 +1,49 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.pdb
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.manifest
+*.spec
+
+# Docker
+*.dockerignore
+.docker/
+
+# Virtualenv
+.venv/
 venv/
+env/
+env.bak/
+venv.bak/
 .env
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# FastAPI
+*.db
+*.sqlite3
+
+# IDEs and editors
+*.sublime-workspace
+*.sublime-project
+*.iml
+.DS_Store
+
+# System files
+Thumbs.db

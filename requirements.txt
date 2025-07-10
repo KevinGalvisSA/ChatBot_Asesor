@@ -1,20 +1,22 @@
 # Librerías para el chatbot de LangChain con Gemini y Qdrant
-langchain==0.0.229
-langchain-community==0.0.229
-langgraph==0.1.5
-google-generativeai==0.0.5
-qdrant-client==2.10.1
-python-dotenv==0.21.1
-openai==0.27.0
-
+langchain
+langchain-community
+langgraph
+google-generativeai
+qdrant-client
+python-dotenv
+openai
 # Para manejo de API
-fastapi==0.95.1
-uvicorn==0.22.0
-requests==2.28.1
+fastapi
+uvicorn
+requests
+
+# Manejo PDFs
+pypdf
 
 # Para embeddings y transformaciones
-numpy==1.24.3
-sentence-transformers==2.2.2
+numpy
+sentence-transformers
 
 # Validación de entrada de datos
-pydantic==1.10.7
+pydantic
