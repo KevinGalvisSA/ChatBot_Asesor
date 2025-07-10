@@ -10,3 +10,4 @@ class State(TypedDict):
     retrival: Any
     system_message: str
     token_usage: Dict[str, Any]
+    question: str  # Agregar la clave 'question' para que esté presente en el estado
