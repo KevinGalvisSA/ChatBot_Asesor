@@ -4,8 +4,6 @@ from langchain.vectorstores import Qdrant
 from dotenv import load_dotenv
 import os
 
-load_dotenv()  # Carga el archivo .env
-
 # Cargar el modelo de embeddings
 model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
 
@@ -14,10 +12,8 @@ def generate_embeddings(text):
     return model.encode(text)
 
 # Crear la conexión con Qdrant Cloud
-client = QdrantClient(
-        url=os.getenv("QDRANT_URL"), 
-        api_key=os.getenv("QDRANT_API_KEY")  
-    ) # type: ignore
+qdrant_url = os.getenv("QDRANT_URL")
+qdrant_api_key = os.getenv("QDRANT_API_KEY")
 
 # Crear el vectorstore usando embeddings generados por sentence-transformers
 vectorstore = Qdrant(client=client, collection_name="asesorias", embeddings=generate_embeddings) # type: ignore
